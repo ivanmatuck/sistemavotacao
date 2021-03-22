@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<div th:each = "candidato : ${candidatos}">
+Clique para votar em: 
+<a th:href = "@{/votoPara(numeroCandidato = ${candidato.numeroCandidato})}" th:text=${candidato.nomeCandidato}>clique</a>	
+</div>
+
+
+</body>
+</html>
